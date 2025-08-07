@@ -2,7 +2,13 @@
 
 import { motion } from "framer-motion";
 
-const modules = [
+type Module = {
+  week: string;
+  title: string;
+  description: string;
+};
+
+const modules: Module[] = [
   {
     week: "Tydzień 1",
     title: "Podstawy fotografii",

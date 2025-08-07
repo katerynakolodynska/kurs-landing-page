@@ -36,7 +36,7 @@ const AboutInstructorSection = () => {
 
           <p className="text-gray-700 leading-relaxed pb-6">
             Prowadził warsztaty w całej Polsce i online. Jego celem jest
-            pokazanie, że profesjonalna fotografia jest dostępna dla każdego –
+            pokazanie, że profesjonalna fotografia jest dostępna dla każdego -
             bez względu na sprzęt czy doświadczenie.
           </p>
 

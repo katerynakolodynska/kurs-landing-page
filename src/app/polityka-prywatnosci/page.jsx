@@ -9,7 +9,7 @@ const PrivacyPolicyPage = () => {
 
       <p className="mb-4">
         Niniejsza polityka prywatności opisuje, w jaki sposób przetwarzamy Twoje
-        dane osobowe na stronie kursu online „Fotograf z Zera” dostępnej pod
+        dane osobowe na stronie kursu online "Fotograf z Zera" dostępnej pod
         adresem: <strong>[wstaw adres strony]</strong>.
       </p>
 
@@ -25,17 +25,17 @@ const PrivacyPolicyPage = () => {
         2. Cele i podstawy prawne przetwarzania
       </h2>
       <ul className="list-disc list-inside mb-4">
-        <li>Realizacja zapisów na kurs – art. 6 ust. 1 lit. b RODO</li>
+        <li>Realizacja zapisów na kurs - art. 6 ust. 1 lit. b RODO</li>
         <li>
-          Odpowiedzi na zapytania z formularza kontaktowego – art. 6 ust. 1 lit.
+          Odpowiedzi na zapytania z formularza kontaktowego - art. 6 ust. 1 lit.
           f RODO
         </li>
         <li>
-          Wysyłka materiałów marketingowych (newsletter) – art. 6 ust. 1 lit. a
+          Wysyłka materiałów marketingowych (newsletter) - art. 6 ust. 1 lit. a
           RODO
         </li>
         <li>
-          Analiza ruchu na stronie (Google Analytics) – art. 6 ust. 1 lit. f
+          Analiza ruchu na stronie (Google Analytics) - art. 6 ust. 1 lit. f
           RODO
         </li>
       </ul>
@@ -45,8 +45,8 @@ const PrivacyPolicyPage = () => {
         Twoje dane mogą być przekazywane podmiotom trzecim, takim jak:
       </p>
       <ul className="list-disc list-inside mb-4">
-        <li>Formspree / EmailJS – w celu obsługi formularzy</li>
-        <li>Google – w celu analizy statystyk (Google Analytics)</li>
+        <li>Formspree / EmailJS - w celu obsługi formularzy</li>
+        <li>Google - w celu analizy statystyk (Google Analytics)</li>
         <li>Dostawcy hostingu (np. Vercel)</li>
       </ul>
 
@@ -64,7 +64,7 @@ const PrivacyPolicyPage = () => {
       <ul className="list-disc list-inside mb-4">
         <li>dostępu do swoich danych</li>
         <li>sprostowania danych</li>
-        <li>usunięcia danych („prawo do bycia zapomnianym”)</li>
+        <li>usunięcia danych ("prawo do bycia zapomnianym")</li>
         <li>ograniczenia przetwarzania</li>
         <li>sprzeciwu wobec przetwarzania</li>
         <li>przenoszenia danych</li>

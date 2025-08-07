@@ -20,7 +20,7 @@ const HeroSection = () => {
         <div className="w-full lg:w-1/2 text-center lg:text-left drop-shadow-lg ml-6">
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 pb-6 leading-tight drop-shadow-lg">
             Kurs fotograficzny <br />
-            <span className="text-cyan-600">“Fotograf od zera”</span>
+            <span className="text-cyan-600">"Fotograf od zera"</span>
           </h1>
           <p className="text-base md:text-lg text-gray-900 pb-6 drop-shadow-lg">
             Naucz się fotografii i zacznij zarabiać już po 4 tygodniach!

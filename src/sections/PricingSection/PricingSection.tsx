@@ -2,6 +2,13 @@
 
 import Link from "next/link";
 
+type Plan = {
+  name: string;
+  price: string;
+  features: string[];
+  popular?: boolean;
+};
+
 const plans = [
   {
     name: "Basic",

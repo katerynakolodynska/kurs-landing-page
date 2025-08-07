@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import { useEffect, useRef, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,7 +10,12 @@ import type { Swiper as SwiperClass } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const benefits = [
+type Benefit = {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+};
+const benefits: Benefit[] = [
   {
     icon: <Camera className="w-8 h-8 text-cyan-600" />,
     title: "Praktyka od pierwszego dnia",
@@ -66,10 +71,7 @@ const BenefitsSection = () => {
   }, [swiperInstance]);
 
   return (
-    <section
-      className="bg-cyan-100 py-7 border-b border-cyan-200"
-      
-    >
+    <section className="bg-cyan-100 py-7 border-b border-cyan-200">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-gray-900 pb-5">
           Dlaczego warto?
@@ -103,8 +105,8 @@ const BenefitsSection = () => {
                 swiper.params.navigation &&
                 typeof swiper.params.navigation !== "boolean"
               ) {
-                (swiper.params.navigation as any).prevEl = prevRef.current;
-                (swiper.params.navigation as any).nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current!;
+                swiper.params.navigation.nextEl = nextRef.current!;
               }
             }}
           >

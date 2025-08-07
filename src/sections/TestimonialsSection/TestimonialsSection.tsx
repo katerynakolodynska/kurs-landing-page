@@ -8,7 +8,13 @@ import { useEffect, useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const testimonials = [
+type Testimonial = {
+  name: string;
+  text: string;
+  image: string;
+};
+
+const testimonials: Testimonial[] = [
   {
     name: "Anna Kowalska",
     text: "Dzięki temu kursowi zaczęłam zarabiać na fotografii już po miesiącu!",
@@ -91,8 +97,8 @@ const TestimonialsSection = () => {
                 swiper.params.navigation &&
                 typeof swiper.params.navigation !== "boolean"
               ) {
-                (swiper.params.navigation as any).prevEl = prevRef.current;
-                (swiper.params.navigation as any).nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current!;
+                swiper.params.navigation.nextEl = nextRef.current!;
               }
             }}
           >

@@ -4,19 +4,19 @@ import { useEffect, useState } from "react";
 
 const courseModules = [
   {
-    title: "Tydzień 1 – Podstawy fotografii",
+    title: "Tydzień 1 - Podstawy fotografii",
     videoUrl: "https://www.youtube.com/embed/VIDEO_ID_1",
   },
   {
-    title: "Tydzień 2 – Portrety i modelka",
+    title: "Tydzień 2 - Portrety i modelka",
     videoUrl: "https://www.youtube.com/embed/VIDEO_ID_2",
   },
   {
-    title: "Tydzień 3 – Obróbka zdjęć",
+    title: "Tydzień 3 - Obróbka zdjęć",
     videoUrl: "https://www.youtube.com/embed/VIDEO_ID_3",
   },
   {
-    title: "Tydzień 4 – Portfolio i klienci",
+    title: "Tydzień 4 - Portfolio i klienci",
     videoUrl: "https://www.youtube.com/embed/VIDEO_ID_4",
   },
 ];

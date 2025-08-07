@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const images = [
+const images: string[] = [
   "/portfolio/1.jpg",
   "/portfolio/2.jpg",
   "/portfolio/3.jpg",
@@ -26,7 +26,7 @@ export default function PortfolioPage() {
         </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {images.map((src, index) => (
+          {images.map((src: string, index: number) => (
             <div
               key={index}
               className="relative aspect-[4/3] overflow-hidden rounded-lg shadow group"

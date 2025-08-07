@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <head>
-        <Script id="google-translate-init" strategy="afterInteractive">
+        {/* <Script id="google-translate-init" strategy="afterInteractive">
           {`
             function googleTranslateElementInit() {
               new google.translate.TranslateElement({
@@ -60,7 +60,7 @@ export default function RootLayout({
               }
             })();
           `}
-        </Script>
+        </Script> */}
       </head>
 
       <body

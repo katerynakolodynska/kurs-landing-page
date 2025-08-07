@@ -4,7 +4,12 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const navLinks = [
+type NavLink = {
+  label: string;
+  href: string;
+};
+
+const navLinks: NavLink[] = [
   { label: "O autorze", href: "/about" },
   { label: "O kursie", href: "/course" },
   { label: "Program", href: "/#program" },
@@ -15,8 +20,10 @@ const navLinks = [
 ];
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const toggleMenu = () => setIsOpen((prev) => !prev);
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-[1000] h-16 transition-all duration-300">

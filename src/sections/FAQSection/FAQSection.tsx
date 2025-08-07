@@ -3,7 +3,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const faqs = [
+type FAQ = {
+  question: string;
+  answer: string;
+};
+
+const faqs: FAQ[] = [
   {
     question: "Czy muszę mieć profesjonalny aparat?",
     answer:

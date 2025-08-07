@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const portfolioImages = [
+const portfolioImages: string[] = [
   "/portfolio/1.jpg",
   "/portfolio/2.jpg",
   "/portfolio/3.jpg",
@@ -16,7 +16,7 @@ const PortfolioSection = () => {
           Portfolio instruktora
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-          {portfolioImages.map((src, i) => (
+          {portfolioImages.map((src: string, i: number) => (
             <div
               key={i}
               className="overflow-hidden rounded-lg shadow-md group aspect-[4/3] relative"
