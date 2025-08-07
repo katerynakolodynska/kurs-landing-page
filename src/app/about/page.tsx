@@ -6,7 +6,10 @@ import { Camera, Award, Users, School } from "lucide-react";
 
 const AboutInstructorSection = () => {
   return (
-    <section id="about" className="bg-cyan-100 py-60 border-t border-gray-100">
+    <section
+      id="about"
+      className="bg-cyan-100 py-20 md:py-60 border-t border-gray-100"
+    >
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-10">
         <div className="w-full md:w-1/2 flex justify-center">
           <Image

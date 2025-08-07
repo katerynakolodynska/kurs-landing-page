@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-bg.jpg"
-          alt="Tło fotograficzne"
+          alt="Tlo fotograficzne"
           fill
           className="object-cover opacity-60"
           priority

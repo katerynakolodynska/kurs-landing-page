@@ -17,28 +17,28 @@ const AboutCoursePage = () => {
         <p className="text-gray-700 leading-relaxed text-lg">
           Kurs trwa <strong>4 tygodnie</strong> i składa się z krótkich,
           praktycznych lekcji wideo, zadań oraz sesji feedbackowych. Uczysz się
-          kiedy chcesz — wszystko dostępne 24/7 z dowolnego urządzenia.
+          kiedy chcesz - wszystko dostępne 24/7 z dowolnego urządzenia.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           <div className="flex items-start gap-4">
             <Camera className="text-cyan-600 w-8 h-8" />
             <p>
-              <strong>20+ lekcji wideo</strong> z konkretami — bez teorii dla
+              <strong>20+ lekcji wideo</strong> z konkretami - bez teorii dla
               teorii.
             </p>
           </div>
           <div className="flex items-start gap-4">
             <Clock className="text-cyan-600 w-8 h-8" />
             <p>
-              <strong>Elastyczny czas nauki</strong> — uczysz się w swoim
+              <strong>Elastyczny czas nauki</strong> - uczysz się w swoim
               tempie.
             </p>
           </div>
           <div className="flex items-start gap-4">
             <Users className="text-cyan-600 w-8 h-8" />
             <p>
-              <strong>Grupa wsparcia</strong> — wymiana doświadczeń z innymi
+              <strong>Grupa wsparcia</strong> - wymiana doświadczeń z innymi
               kursantami.
             </p>
           </div>
@@ -96,7 +96,7 @@ const AboutCoursePage = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-800 text-lg">
           <div className="bg-cyan-50 p-5 rounded-xl shadow-sm flex flex-col gap-3">
             <Award className="text-cyan-600 w-8 h-8" />
-            <p>Program oparty na praktyce — 0% lania wody, 100% działania.</p>
+            <p>Program oparty na praktyce - 0% lania wody, 100% działania.</p>
           </div>
           <div className="bg-cyan-50 p-5 rounded-xl shadow-sm flex flex-col gap-3">
             <Zap className="text-cyan-600 w-8 h-8" />
