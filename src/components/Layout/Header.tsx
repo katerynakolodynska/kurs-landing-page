@@ -37,13 +37,13 @@ const Header = () => {
 
         <nav className="hidden md:flex items-center space-x-10">
           {navLinks.map(({ label, href }) => (
-            <a
+            <Link
               key={label}
               href={href}
               className="text-sm font-medium text-gray-800 hover:text-cyan-500 transition-colors duration-200"
             >
               {label}
-            </a>
+            </Link>
           ))}
         </nav>
 

@@ -12,20 +12,26 @@ const Footer = () => {
           <h4 className="text-lg md:text-xl font-semibold pb-4">Nawigacja</h4>
           <ul className="space-y-2 text-sm md:text-base grid gap-2.5">
             <li>
-              <a href="/#program" className="hover:text-cyan-400 scroll-smooth">
+              <Link
+                href="/#program"
+                className="hover:text-cyan-400 scroll-smooth"
+              >
                 Program
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="/#cennik" className="hover:text-cyan-400 scroll-smooth">
+              <Link
+                href="/#cennik"
+                className="hover:text-cyan-400 scroll-smooth"
+              >
                 Cennik
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#faq" className="hover:text-cyan-400 scroll-smooth">
+              <Link href="/#faq" className="hover:text-cyan-400 scroll-smooth">
                 FAQ
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -35,21 +41,24 @@ const Footer = () => {
             Social Media
           </h4>
           <div className="flex gap-6 text-2xl">
-            <a
+            <Link
               href="https://www.facebook.com/share/1C71eTVL8r/ "
               aria-label="Facebook"
             >
               <FaFacebookF />
-            </a>
-            <a href="https://www.instagram.com/kate_ms0" aria-label="Instagram">
+            </Link>
+            <Link
+              href="https://www.instagram.com/kate_ms0"
+              aria-label="Instagram"
+            >
               <FaInstagram />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.youtube.com/watch?v=etC5TVVsAA4"
               aria-label="YouTube"
             >
               <FaYoutube />
-            </a>
+            </Link>
           </div>
 
           <CookieSettingsButton />
