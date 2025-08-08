@@ -71,100 +71,101 @@ const BenefitsSection = () => {
   }, [swiperInstance]);
 
   return (
-    <section className="bg-cyan-100 py-7 border-b border-cyan-200">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 pb-5">
-          Dlaczego warto?
-        </h2>
-
-        <div className="hidden md:grid grid-cols-3 gap-6">
-          {benefits.map(({ icon, title, description }) => (
-            <div
-              key={title}
-              className="bg-white rounded-xl shadow-md p-6 min-h-[220px] flex flex-col items-center justify-center"
-            >
-              <div className="text-cyan-600 text-4xl mb-4">{icon}</div>
-              <h3 className="text-lg font-semibold mb-2">{title}</h3>
-              <p className="text-sm text-gray-600">{description}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="md:hidden">
-          <Swiper
-            spaceBetween={16}
-            slidesPerView={1.1}
-            modules={[Navigation]}
-            onSwiper={setSwiperInstance}
-            navigation={{
-              prevEl: prevRef.current,
-              nextEl: nextRef.current,
-            }}
-            onBeforeInit={(swiper: SwiperClass) => {
-              if (
-                swiper.params.navigation &&
-                typeof swiper.params.navigation !== "boolean"
-              ) {
-                swiper.params.navigation.prevEl = prevRef.current!;
-                swiper.params.navigation.nextEl = nextRef.current!;
-              }
-            }}
-          >
+    <>
+      <section className="bg-[#cffafe] pb-7  ">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 pb-10">
+            Dlaczego warto?
+          </h2>
+          <div className="hidden md:grid grid-cols-3 gap-6">
             {benefits.map(({ icon, title, description }) => (
-              <SwiperSlide key={title}>
-                <div className="bg-white rounded-xl shadow-md p-6 min-h-[220px] flex flex-col justify-center items-center  mb-2">
-                  <div className="text-cyan-600 text-4xl mb-4">{icon}</div>
-                  <h3 className="text-lg font-semibold mb-2">{title}</h3>
-                  <p className="text-sm text-gray-600">{description}</p>
-                </div>
-              </SwiperSlide>
+              <div
+                key={title}
+                className="bg-white rounded-xl shadow-md p-6 min-h-[220px] flex flex-col items-center justify-center"
+              >
+                <div className="text-cyan-600 text-4xl mb-4">{icon}</div>
+                <h3 className="text-lg font-semibold mb-2">{title}</h3>
+                <p className="text-sm text-gray-600">{description}</p>
+              </div>
             ))}
-          </Swiper>
+          </div>
 
-          <div className="flex justify-center mt-4 gap-4">
-            <button
-              ref={prevRef}
-              className="w-10 h-10 rounded-full bg-cyan-600 hover:bg-cyan-700 text-white flex items-center justify-center transition duration-300"
-              aria-label="Poprzedni"
+          <div className="md:hidden">
+            <Swiper
+              spaceBetween={16}
+              slidesPerView={1.1}
+              modules={[Navigation]}
+              onSwiper={setSwiperInstance}
+              navigation={{
+                prevEl: prevRef.current,
+                nextEl: nextRef.current,
+              }}
+              onBeforeInit={(swiper: SwiperClass) => {
+                if (
+                  swiper.params.navigation &&
+                  typeof swiper.params.navigation !== "boolean"
+                ) {
+                  swiper.params.navigation.prevEl = prevRef.current!;
+                  swiper.params.navigation.nextEl = nextRef.current!;
+                }
+              }}
             >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
+              {benefits.map(({ icon, title, description }) => (
+                <SwiperSlide key={title}>
+                  <div className="bg-white rounded-xl shadow-md p-6 min-h-[220px] flex flex-col justify-center items-center  mb-2">
+                    <div className="text-cyan-600 text-4xl mb-4">{icon}</div>
+                    <h3 className="text-lg font-semibold mb-2">{title}</h3>
+                    <p className="text-sm text-gray-600">{description}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
-            <button
-              ref={nextRef}
-              className="w-10 h-10 rounded-full bg-cyan-600 hover:bg-cyan-700 text-white flex items-center justify-center transition duration-300"
-              aria-label="Następny"
-            >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
+            <div className="flex justify-center mt-4 gap-4">
+              <button
+                ref={prevRef}
+                className="w-10 h-10 rounded-full bg-cyan-600 hover:bg-cyan-700 text-white flex items-center justify-center transition duration-300"
+                aria-label="Poprzedni"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+
+              <button
+                ref={nextRef}
+                className="w-10 h-10 rounded-full bg-cyan-600 hover:bg-cyan-700 text-white flex items-center justify-center transition duration-300"
+                aria-label="Następny"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

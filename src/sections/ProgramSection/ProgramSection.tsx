@@ -1,6 +1,8 @@
 "use client";
+import Link from "next/link";
 
 import { motion } from "framer-motion";
+import WaveDivider from "@/components/WaveDivider";
 
 type Module = {
   week: string;
@@ -37,37 +39,47 @@ const modules: Module[] = [
 
 const ProgramSection = () => {
   return (
-    <section id="program" className="py-7 bg-white">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 pb-7">
-          Program kursu
-        </h2>
+    <>
+      <section id="program" className="py-7 bg-gray-50 ">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 pb-7">
+            Program kursu
+          </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {modules.map((module, index) => (
-            <motion.div
-              key={index}
-              className="bg-cyan-50 p-6 rounded-xl border-2 border-blue-100  shadow-sm hover:shadow-lg transition duration-300 relative overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              viewport={{ once: true }}
+          <div className="grid md:grid-cols-2 gap-8 pb-7">
+            {modules.map((module, index) => (
+              <motion.div
+                key={index}
+                className="bg-cyan-50 p-6 rounded-xl border-2 border-blue-100  shadow-sm hover:shadow-lg transition duration-300 relative overflow-hidden"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="absolute top-6 left-6 bg-cyan-100 text-cyan-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-sm">
+                  {module.week}
+                </div>
+
+                <div className="pt-12">
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">
+                    {module.title}
+                  </h4>
+                  <p className="text-gray-600 text-sm">{module.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="mx-auto text-center">
+            <Link
+              href="/course"
+              className=" bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-8 transition duration-300 rounded-full"
             >
-              <div className="absolute top-6 left-6 bg-cyan-100 text-cyan-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-sm">
-                {module.week}
-              </div>
-
-              <div className="pt-12">
-                <h4 className="text-xl font-bold text-gray-800 mb-2">
-                  {module.title}
-                </h4>
-                <p className="text-gray-600 text-sm">{module.description}</p>
-              </div>
-            </motion.div>
-          ))}
+              O kursie
+            </Link>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

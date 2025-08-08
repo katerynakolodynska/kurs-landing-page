@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
+import ImageModal from "@/components/ImageModal";
 
 const images: string[] = [
   "/portfolio/1.jpg",
@@ -17,30 +19,57 @@ const images: string[] = [
   "/portfolio/12.jpg",
 ];
 
-export default function PortfolioPage() {
-  return (
-    <main className="min-h-screen py-20 px-6 sm:px-10">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center pb-7 text-gray-900">
-          Portfolio instruktora
-        </h1>
+export default function PortfolioSection() {
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {images.map((src: string, index: number) => (
-            <div
-              key={index}
-              className="relative aspect-[4/3] overflow-hidden rounded-lg shadow group"
-            >
-              <Image
-                src={src}
-                alt={`Zdjęcie ${index + 1}`}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          ))}
-        </div>
+  const openModal = (index: number) => {
+    setCurrentIndex(index);
+    setShowModal(true);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  return (
+    <section className="py-20 px-4 max-w-5xl mx-auto">
+      <h2 className="text-3xl font-bold text-center pb-6">
+        Portfolio instruktora
+      </h2>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        {images.map((img, index) => (
+          <div
+            key={index}
+            onClick={() => openModal(index)}
+            className="relative w-full h-64 cursor-pointer rounded-lg overflow-hidden group"
+          >
+            <Image
+              src={img}
+              alt={`Portfolio ${index + 1}`}
+              fill
+              priority={index === 0}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover group-hover:opacity-80 transition"
+            />
+          </div>
+        ))}
       </div>
-    </main>
+
+      {showModal && (
+        <ImageModal
+          images={images}
+          currentIndex={currentIndex}
+          onClose={() => setShowModal(false)}
+          onPrev={handlePrev}
+          onNext={handleNext}
+        />
+      )}
+    </section>
   );
 }

@@ -52,3 +52,7 @@ html {
 .goog-text-highlight {
   display: none !important;
 }
+
+[id] {
+  scroll-margin-top: 60px;
+}

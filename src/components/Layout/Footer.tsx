@@ -7,35 +7,23 @@ import CookieSettingsButton from "../CookieSettingsButton";
 const Footer = () => {
   return (
     <footer className="w-full bg-gradient-to-b from-gray-900 to-black text-white py-5 ">
-      <div className="max-w-7xl mx-auto px-6 pd:px-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="max-w-7xl mx-auto px-6 pd:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <h4 className="text-lg md:text-xl font-semibold pb-4">Nawigacja</h4>
-          <ul className="space-y-2 text-sm md:text-base">
+          <ul className="space-y-2 text-sm md:text-base grid gap-2.5">
             <li>
-              <a href="#about" className="hover:text-cyan-400 scroll-smooth">
-                O kursie
-              </a>
-            </li>
-            <li>
-              <a href="#program" className="hover:text-cyan-400 scroll-smooth">
+              <a href="/#program" className="hover:text-cyan-400 scroll-smooth">
                 Program
               </a>
             </li>
+
             <li>
-              <a
-                href="#testimonials"
-                className="hover:text-cyan-400 scroll-smooth"
-              >
-                Opinie
-              </a>
-            </li>
-            <li>
-              <a href="#pricing" className="hover:text-cyan-400 scroll-smooth">
+              <a href="/#cennik" className="hover:text-cyan-400 scroll-smooth">
                 Cennik
               </a>
             </li>
             <li>
-              <a href="#faq" className="hover:text-cyan-400 scroll-smooth">
+              <a href="/#faq" className="hover:text-cyan-400 scroll-smooth">
                 FAQ
               </a>
             </li>
@@ -43,17 +31,23 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="text-lg md:text-xl font-semibold pb-8">
+          <h4 className="text-lg md:text-xl font-semibold pb-6">
             Social Media
           </h4>
-          <div className="flex gap-4 text-2xl">
-            <a href="#" aria-label="Facebook">
+          <div className="flex gap-6 text-2xl">
+            <a
+              href="https://www.facebook.com/share/1C71eTVL8r/ "
+              aria-label="Facebook"
+            >
               <FaFacebookF />
             </a>
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/kate_ms0" aria-label="Instagram">
               <FaInstagram />
             </a>
-            <a href="#" aria-label="YouTube">
+            <a
+              href="https://www.youtube.com/watch?v=etC5TVVsAA4"
+              aria-label="YouTube"
+            >
               <FaYoutube />
             </a>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import PlanSelect from "./PlanSelect";
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -49,16 +50,35 @@ const RegistrationForm = () => {
         required
         className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500"
       />
-      <select
-        name="plan"
+
+      <PlanSelect
         value={formData.plan}
-        onChange={handleChange}
-        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-      >
-        <option value="Basic">Basic</option>
-        <option value="Pro">Pro</option>
-        <option value="VIP">VIP</option>
-      </select>
+        onChange={(value) => setFormData((prev) => ({ ...prev, plan: value }))}
+      />
+      {/* <div className="relative">
+        <select
+          name="plan"
+          value={formData.plan}
+          onChange={handleChange}
+          className="w-full appearance-none border border-gray-300 rounded-lg px-4 py-3 pr-10 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+        >
+          <option value="Basic">Basic</option>
+          <option value="Pro">Pro</option>
+          <option value="VIP">VIP</option>
+        </select>
+
+        <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+          <svg
+            className="w-4 h-4 text-gray-600"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            <path d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div> */}
 
       <button
         type="submit"

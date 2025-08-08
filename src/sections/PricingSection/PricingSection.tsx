@@ -1,5 +1,6 @@
 "use client";
 
+import WaveDivider from "@/components/WaveDivider";
 import Link from "next/link";
 
 type Plan = {
@@ -42,7 +43,7 @@ const plans = [
 
 const PricingSection = () => {
   return (
-    <section id="cennik" className="bg-white pb-7">
+    <section id="cennik" className="bg-white pt-7">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-gray-900 pb-5">Cennik</h2>
         <div className="grid md:grid-cols-3 gap-8">
@@ -75,6 +76,7 @@ const PricingSection = () => {
           ))}
         </div>
       </div>
+      <WaveDivider color="#cffafe" direction="up" />
     </section>
   );
 };

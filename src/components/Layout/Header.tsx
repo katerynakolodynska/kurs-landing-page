@@ -10,13 +10,12 @@ type NavLink = {
 };
 
 const navLinks: NavLink[] = [
-  { label: "O autorze", href: "/about" },
   { label: "O kursie", href: "/course" },
   { label: "Program", href: "/#program" },
   { label: "Cennik", href: "/#cennik" },
   { label: "FAQ", href: "/#faq" },
   { label: "Zapisz się", href: "/#zapisz" },
-  { label: "Portfolio", href: "/#portfolio" },
+  { label: "Portfolio", href: "/portfolio" },
 ];
 
 const Header = () => {
@@ -26,7 +25,7 @@ const Header = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-[1000] h-16 transition-all duration-300">
+    <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-1000 h-16 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link
           href="/"
