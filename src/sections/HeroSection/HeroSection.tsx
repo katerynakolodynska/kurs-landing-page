@@ -101,7 +101,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <WaveDivider color="#cffafe" direction="up" />
+      <WaveDivider color="#cffafe" direction="up" className="h-50" />
     </section>
   );
 };

@@ -20,14 +20,16 @@ const VideoModal = () => {
 
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
-          <button
-            onClick={closeModal}
-            className="absolute top-70 right-3 z-100 text-gray-600 hover:text-black bg-white/80 rounded-full p-1"
-          >
-            <X size={24} />
-          </button>
           <div className="relative w-[90%] max-w-3xl bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="aspect-video w-full">
+            {/* Close button inside relative container */}
+            <button
+              onClick={closeModal}
+              className="absolute top-3 right-3 z-10 text-gray-600 hover:text-black bg-white/80 rounded-full p-1"
+            >
+              <X size={24} />
+            </button>
+
+            <div className="aspect-video w-full relative z-0">
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/etC5TVVsAA4"

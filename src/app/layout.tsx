@@ -24,7 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl" data-scroll-behavior="smooth">
-      <head></head>
+      <head>
+        <link rel="icon" href="/logo.svg" sizes="32x32" />
+      </head>
 
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-white text-gray-900 flex flex-col min-h-screen`}

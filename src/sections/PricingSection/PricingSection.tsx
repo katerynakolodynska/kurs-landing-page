@@ -2,6 +2,7 @@
 
 import WaveDivider from "@/components/WaveDivider";
 import Link from "next/link";
+import { Camera } from "lucide-react";
 
 type Plan = {
   name: string;

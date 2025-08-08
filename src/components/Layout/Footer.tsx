@@ -70,7 +70,7 @@ const Footer = () => {
             Zostaw e-mail i otrzymuj nowości oraz zniżki.
           </p>
           <form
-            action="https://formspree.io/f/{твій-id}"
+            action="https://formspree.io/f/mqalgzvj"
             method="POST"
             className="flex gap-3  flex-col  "
           >
