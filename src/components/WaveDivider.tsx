@@ -17,7 +17,7 @@ const WaveDivider = ({
     <div className={`relative ${className}`}>
       <svg
         className={`w-full ${transformClass}`}
-        viewBox="0 0 1440 250"
+        viewBox="0 0 1340 250"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
       >
